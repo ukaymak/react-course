@@ -26,8 +26,6 @@ export default class ProductList extends Component {
                               <th>{product.unitPrice}</th>
                               <th>{product.quantityPerUnit}</th>
                               <th>{product.unitsInStock}</th>
-
-                          
                         </tr>
                     ))}
                     </tbody>
