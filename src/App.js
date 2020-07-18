@@ -30,7 +30,7 @@ export default class App extends Component {
   addToCart = (product) => {
     //alert(product.productName)
     let newCart = this.state.cart;
-    var addedItem = newCart.find(c => c.product.id === product.id);
+    let addedItem = newCart.find(c => c.product.id === product.id);
     // ekleneni ve adedidi tutmak istiyorum
     if (addedItem) {
       addedItem.quantity += 1;
