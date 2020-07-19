@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import CartSummary from "./CartSummary";
+
 import {
   Collapse,
   Navbar,
@@ -7,10 +9,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
 } from 'reactstrap';
 
 const Navi = (props) => {
@@ -31,23 +29,8 @@ const Navi = (props) => {
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options - {props.cart.length}
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            <CartSummary cart={props.cart}/>
+
           </Nav>
         </Collapse>
       </Navbar>
