@@ -41,13 +41,13 @@ export default class App extends Component {
       newCart.push({ product: product, quantity: 1 });
     }
     this.setState({ cart: newCart });
-    alertify.notify(product.productName + " added to cart", "success", 5);
+    alertify.notify(`${product.productName} added to cart`, "success", 5);
   };
 
   removeFromCart = (product) => {
     let newCart = this.state.cart.filter((c) => c.product.id !== product.id);
     this.setState({ cart: newCart });
-    alertify.notify(product.productName + " added to cart", "error", 5);
+    alertify.notify(`${product.productName} removed cart`, "error", 5);
 
   };
 
