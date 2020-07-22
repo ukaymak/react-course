@@ -8,6 +8,7 @@ import { Switch, Route } from "react-router-dom";
 import NotFound from "./NotFound";
 import CartList from "./CartList";
 import FormDemo1 from "./FormDemo1";
+import FormDemo2 from "./FormDemo2";
 
 export default class App extends Component {
   state = { currentCategory: " ", products: [], cart: [] };
@@ -49,7 +50,6 @@ export default class App extends Component {
     let newCart = this.state.cart.filter((c) => c.product.id !== product.id);
     this.setState({ cart: newCart });
     alertify.notify(`${product.productName} removed cart`, "error", 5);
-
   };
 
   render() {
@@ -90,11 +90,11 @@ export default class App extends Component {
                       {...props}
                       cart={this.state.cart}
                       removeFromCart={this.removeFromCart}
-
                     />
                   )}
                 />
-                <Route path="/form1" component={FormDemo1}></Route>
+                <Route path="/form1" component={FormDemo1} />
+                <Route path="/form2" component={FormDemo2} />
                 <Route component={NotFound} />
               </Switch>
             </Col>

@@ -29,6 +29,13 @@ const Navi = (props) => {
               <Link to="form1">Demo 1</Link>
               </NavLink>
             </NavItem>
+
+            <NavItem>
+              <NavLink>
+              <Link to="form2">Demo 2</Link>
+              </NavLink>
+            </NavItem>
+
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
             </NavItem>
